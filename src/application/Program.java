@@ -19,7 +19,7 @@ public class Program {
 		products.add(new Product("Smart TV LG 4K", 4850.00));
 		products.add(new Product("External SSD 1Tb", 785.00));
 		
-		products.forEach(new UpdatePrice());
+		products.forEach(Product::staticPriceUpdate);
 		
 		products.forEach(System.out::println);
 	}

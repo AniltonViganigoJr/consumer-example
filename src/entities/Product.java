@@ -40,6 +40,10 @@ public class Product {
 	public static void staticPriceUpdate(Product p) {
 		p.setPrice(p.getPrice()* 1.1);
 	}
+	
+	public void nonStaticPriceUpdate() {
+		price = price * 1.1;
+	}
 
 	@Override
 	public boolean equals(Object obj) {

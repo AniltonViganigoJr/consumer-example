@@ -2,7 +2,6 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
 
 import entities.Product;
 
@@ -19,11 +18,9 @@ public class Program {
 		products.add(new Product("Smart TV LG 4K", 4850.00));
 		products.add(new Product("External SSD 1Tb", 785.00));
 		
-		Consumer<Product> productConsumer = p -> {
-			p.setPrice(p.getPrice()*1.1); 
-		};
+		double factor = 1.1;
 		
-		products.forEach(productConsumer);
+		products.forEach(p -> p.setPrice(p.getPrice() * factor));
 		
 		products.forEach(System.out::println);
 	}
